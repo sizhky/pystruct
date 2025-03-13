@@ -27,15 +27,15 @@ class MyExt(Extension, object):
         self.__include_dirs = dirs
 
 
-ext_modules = [
-    MyExt("pystruct.models.utils", ["src/utils.c"]),
-    MyExt("pystruct.inference._viterbi", ["pystruct/inference/_viterbi.c"]),
-]
+# ext_modules = [
+#     MyExt("pystruct.models.utils", ["src/utils.c"]),
+#     MyExt("pystruct.inference._viterbi", ["pystruct/inference/_viterbi.c"]),
+# ]
 
 setup(name="pystruct",
       version="0.3.2",
-      setup_requires=["cython", "numpy"],
-      install_requires=["ad3", "numpy"],
+      # setup_requires=["cython", "numpy"],
+      # install_requires=["ad3", "numpy"],
       packages=['pystruct', 'pystruct.learners', 'pystruct.inference',
                 'pystruct.models', 'pystruct.utils', 'pystruct.datasets',
                 'pystruct.tests', 'pystruct.tests.test_learners',
@@ -47,8 +47,8 @@ setup(name="pystruct",
       author_email="t3kcit@gmail.com",
       url="http://pystruct.github.io",
       license="BSD 2-clause",
-      use_2to3=True,
-      ext_modules=ext_modules,
+      # use_2to3=True,
+      # ext_modules=ext_modules,
       classifiers=['Intended Audience :: Science/Research',
                    'Intended Audience :: Developers',
                    'License :: OSI Approved',
